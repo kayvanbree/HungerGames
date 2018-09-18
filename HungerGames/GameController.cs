@@ -28,22 +28,47 @@ namespace HungerGames
         {
             Console.WriteLine("Starting the hunger games!");
 
-            // console.log players information
-            // Create game loop with win condition
-            // When somebody wins -> console.log the winner
+            for (int i = 0; i < Contestants.Count; i++)
+            {
+                Console.WriteLine(Contestants[i]);
+            }
+
+            while (Contestants.Count != 1)
+            {
+                GameLoop();
+            }
 
             Console.WriteLine("We have a winner!");
         }
 
         private void GameLoop()
         {
-            // For every player:
-            // - Chance to meet other player
-            // - If not dead
-            // - - Chance to find battle item
-            // - - Heal
-            // - If dead
-            // - - Remove from game
+            for (int i = 0; i < Contestants.Count; i++)
+            {
+                // Chance to meet other dead/alive player
+                Contestant contestant = Contestants[i];
+
+                // Get another player, not self
+                int meetsNr = -1;
+                while (meetsNr == i || meetsNr == -1)
+                {
+                    meetsNr = RandomGenerator.GenerateRandomNumber(0, Contestants.Count);
+                }
+                Contestant other = Contestants[meetsNr];
+
+                if (other.Alive)
+                {
+                    // Kill or get killed
+                }
+
+                if (contestant.Alive)
+                {
+                    // Chance to find battle item
+                }
+            }
+
+            Contestants.RemoveAll(item => !item.Alive);
+
         }
     }
 }

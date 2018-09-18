@@ -54,20 +54,10 @@ namespace HungerGames
         public Contestant()
         {
             Alive = true;
-            Gender = GenerateGender();
-            AttackLevel = GenerateRandomNumber();
-            DefenseLevel = GenerateRandomNumber();
+            Gender = RandomGenerator.GenerateGender();
+            AttackLevel = RandomGenerator.GenerateRandomNumber();
+            DefenseLevel = RandomGenerator.GenerateRandomNumber();
             Health = 100;
-        }
-
-        private Gender GenerateGender()
-        {
-            return Gender.Male;
-        }
-
-        private int GenerateRandomNumber()
-        {
-            return 50;
         }
 
         public static Contestant CreateDistrictContestant()
@@ -83,6 +73,12 @@ namespace HungerGames
         public static Contestant CreateContestant()
         {
             return new Contestant();;
+        }
+
+        public override string ToString()
+        {
+            return "Contestant: {Gender: " + Gender + ", AttackLevel: "
+                   + AttackLevel + ", DefenseLevel: " + DefenseLevel + "}";
         }
     }
 }

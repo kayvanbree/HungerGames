@@ -33,8 +33,9 @@
         public static BattleItem GenerateBattleItem()
         {
             BattleItem battleItem = new BattleItem();
-            battleItem.AttackBonus = 50;
-            battleItem.DefenseBonus = 50;
+            battleItem.AttackBonus = RandomGenerator.GenerateRandomNumber();
+            battleItem.DefenseBonus = RandomGenerator.GenerateRandomNumber();
+            return battleItem;
         }
     }
 }
