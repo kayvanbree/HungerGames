@@ -42,6 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BattleItem.cs" />
+    <Compile Include="CareerContestant.cs" />
+    <Compile Include="Contestant.cs" />
+    <Compile Include="DistrictContestant.cs" />
+    <Compile Include="GameController.cs" />
+    <Compile Include="Gender.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

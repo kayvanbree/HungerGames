@@ -10,6 +10,9 @@ namespace HungerGames
     {
         static void Main(string[] args)
         {
+            GameController controller = new GameController();
+            controller.Run();
+            Console.ReadLine();
         }
     }
 }
