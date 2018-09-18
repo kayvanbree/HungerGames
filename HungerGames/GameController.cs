@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HungerGames
 {
@@ -12,6 +9,7 @@ namespace HungerGames
 
         public GameController()
         {
+            Console.WriteLine("Contestants arriving");
             Contestants = new List<Contestant>();
 
             for (int i = 0; i < 12; i++)
@@ -28,12 +26,24 @@ namespace HungerGames
 
         public void Run()
         {
-            Console.WriteLine(Contestants);
+            Console.WriteLine("Starting the hunger games!");
+
+            // console.log players information
+            // Create game loop with win condition
+            // When somebody wins -> console.log the winner
+
+            Console.WriteLine("We have a winner!");
         }
 
-        private void gameLoop()
+        private void GameLoop()
         {
-
+            // For every player:
+            // - Chance to meet other player
+            // - If not dead
+            // - - Chance to find battle item
+            // - - Heal
+            // - If dead
+            // - - Remove from game
         }
     }
 }

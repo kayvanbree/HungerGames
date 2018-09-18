@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HungerGames
+﻿namespace HungerGames
 {
     class CareerContestant : Contestant
     {
+        public CareerContestant()
+        {
+            BattleItem = BattleItem.GenerateBattleItem();
+            AttackLevel = 100;
+        }
     }
 }
